@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = config.get("port") || 3005;
+const PORT = process.env.PORT || config.get("port") || 3005;
 
 async function start() {
   try {
