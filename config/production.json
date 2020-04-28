@@ -1,0 +1,5 @@
+{
+  "port": "3005",
+  "mongoUri": "mongodb+srv://Pavel:julia03081989@cluster0-0nlh0.mongodb.net/dncm?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:3005"
+}
