@@ -10,7 +10,7 @@ import { Transition } from "react-transition-group";
 const defaultStyle = {
   height: 0,
   overflow: "hidden",
-  transition: "all 250ms ease-out",
+  transition: "all 250ms ease-in-out",
 };
 const transitionStyles = {
   enetring: { height: 0 },
@@ -21,7 +21,16 @@ const transitionStyles = {
 
 export default ({ showMenu, menuClicked }) => {
   return (
-    <Transition in={showMenu} timeout={250} mountOnEnter unmountOnExit>
+    <Transition 
+      in={showMenu} 
+      timeout={{
+        appear: 0,
+        enter: 0,
+        exit: 250
+      }} 
+      mountOnEnter 
+      unmountOnExit
+    >
       {(state) => (
         <Menu
           style={{
