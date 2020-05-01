@@ -22,13 +22,15 @@
   "author": "Pavel Yarakhovich <pavel.yarri@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^2.12.0",
     "config": "^3.3.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^15.0.0",
     "mongoose": "^5.9.10",
-    "cross-env": "^7.0.2"
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

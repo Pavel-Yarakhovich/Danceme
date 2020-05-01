@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../shared/Button";
 import TypeOptions from "./TypeOptions";
 import { useMutation } from "@apollo/react-hooks";
-import { addItemMutation } from "./mutations";
+import { addItemMutation, uploadImage } from "./mutations";
 import Confirmation from "./ConfirmationPopup";
 import ErrorMessage from "../../shared/ErrorMessage";
 import PreviewPlaceholder from "../../assets/image/no_photo.png";
