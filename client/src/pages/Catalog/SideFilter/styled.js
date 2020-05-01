@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { themes } from "../../../config/themes";
 import ImportExportIcon from "@material-ui/icons/ImportExport";
+import TouchAppRoundedIcon from '@material-ui/icons/TouchAppRounded';
 
 export const Arrows = styled(ImportExportIcon)`
   color: ${themes.regular.white};
@@ -41,4 +42,17 @@ export const Toggler = styled.div`
   @media (max-width: 600px) {
     top: 100px;
   }
+`;
+
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1.25);
+  }
+  50%, 60% {
+    transform: scale(1.05) rotate(-15deg);
+  }
+`
+
+export const TouchIcon = styled(TouchAppRoundedIcon)`
+  animation: ${pulse} 1s infinite;
 `;

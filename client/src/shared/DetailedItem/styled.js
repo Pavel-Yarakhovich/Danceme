@@ -4,8 +4,9 @@ import CloseIcon from "@material-ui/icons/Close";
 
 export const Container = styled.div`
   position: relative;
-  width: 800px;
-  height: 90vh;
+  width: auto;
+  max-width: 80vw;
+  max-height: 90vh;
   background: ${themes.regular.white};
   padding: 10px;
   box-sizing: border-box;
@@ -18,6 +19,7 @@ export const Container = styled.div`
 
   @media (max-width: 820px) {
     width: 90vw;
+    overflow: auto;
   }
 
   @media (max-width: 550px) {

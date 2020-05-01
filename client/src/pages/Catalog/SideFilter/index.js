@@ -2,11 +2,10 @@ import React, { useState, memo, useCallback } from "react";
 import Button from "../../../shared/Button";
 import { Transition } from "react-transition-group";
 import * as Styled from "./styled";
-import TouchAppRoundedIcon from '@material-ui/icons/TouchAppRounded';
 
 const defaultMenu = {
   right: -200,
-  transition: "all 250ms ease-out",
+  transition: "all 250ms ease-in-out",
 };
 const transitionMenu = {
   entering: { right: -200 },
@@ -19,7 +18,14 @@ export default memo(({ clicked, selected }) => {
   const [isShown, setShown] = useState(false);
   const toggleMenu = useCallback(() => setShown(!isShown), [isShown]);
   return (
-    <Transition in={isShown} timeout={250}>
+    <Transition 
+      in={isShown} 
+      timeout={{
+        appear: 0,
+        enter: 0,
+        exit: 250
+      }}
+    >
       {(state) => (
         <Styled.Menu
           style={{
@@ -68,7 +74,7 @@ export default memo(({ clicked, selected }) => {
             Разное
           </Button>
           <Styled.Toggler onClick={toggleMenu}>
-            <TouchAppRoundedIcon fontSize="large" />
+            <Styled.TouchIcon fontSize="large" />
           </Styled.Toggler>
         </Styled.Menu>
       )}

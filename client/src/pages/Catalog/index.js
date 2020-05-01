@@ -15,20 +15,18 @@ import * as Styled from "./styled";
 
 export default () => {
   const [filter, setFilter] = useState("all");
-  const { loading, error, data } = useQuery(productsQuery);
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
-
-  // !loading && console.log(data.items);
-  console.log(error);
+  const { loading, error, data } = useQuery(productsQuery);
 
   useEffect(() => {
     if (loading) {
       setItems([]);
     } else {
+      console.log("still loading ?", loading);
       setItems(data.items);
     }
-  }, [loading]);
+  }, [loading, data]);
 
   useEffect(() => {
     filter === "all"
