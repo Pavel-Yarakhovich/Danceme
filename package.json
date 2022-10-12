@@ -22,7 +22,7 @@
   "author": "Pavel Yarakhovich <pavel.yarri@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.12.0",
+    "apollo-server": "^2.25.4",
     "apollo-server-express": "^2.12.0",
     "config": "^3.3.1",
     "cors": "^2.8.5",
